@@ -1,0 +1,52 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+main {
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 10% 10% 10% 10%;
+}
+hr {
+    height: 4px;
+    background-color: black;
+    width: 100%;
+    margin: 2% auto;
+}
+ul {
+    padding-inline-start: 20px;
+}
+h1 {
+    margin-bottom: 0;
+}
+h3 {
+    margin-top: 0.5em;
+    color: rgb(5, 132, 92);
+}
+.titre {
+    color: rgb(5, 132, 92);
+    font-size: 1.17em;
+    margin-block-end: 0;
+}
+.block p {
+    margin-block-start:  0;
+}
+.name {
+    margin-bottom: 0%;
+}
+.place {
+    color: rgb(51, 51, 179);
+    margin-block-end: 0;
+}
+.date {
+    margin-block-start: 0;
+    font-size: 13px;
+    color: grey;
+}
+.block {
+    padding-bottom: 5px;
+}
+.adresse {
+    padding-bottom: 1em;
+}
