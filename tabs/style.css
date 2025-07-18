@@ -13,6 +13,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 4em;
+    padding: 0.5em 0 0.5em 0;
 }
 .tabs-nav {
     display: flex;
@@ -20,12 +21,20 @@ header {
     list-style: none;
     gap: 3em;
 }
-
-.tabs-nav p:hover {
+.tabs-nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+.tabs-nav a {
+    color: inherit;           /* hérite de la couleur du parent */
+    text-decoration: none;    /* enlève le soulignement */
+}
+.tabs-nav a:hover {
     color: black;
     background-color: #b4bbce;
-    border-radius: 1em;
 }
+
 /* .logo {
     align-items: center; 
 } */
@@ -49,7 +58,7 @@ h1 {
     flex-direction: row;
     height: 20em;
     position: relative;
-    color: white;
+    color: rgb(150, 87, 87);
     justify-content: center;
     margin-left: auto;
 }
@@ -80,7 +89,7 @@ h1 {
 
 .project {
     padding: 20px;
-    background-color: #b4bbce;
+    background-color: rgb(243, 232, 232);
 }
 .project-grid-card {
     display: grid;
