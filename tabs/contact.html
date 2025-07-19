@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  <title>My Dynamic Website </title>
+
+</head>
+<body>
+    <header>
+        <nav class="tabs">
+            <div class="logo"> <img src="images/logo.webp" alt="description-logo"> </div>
+            <div class="tabs-nav">
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="article.html">Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <section class="contact">
+            
+        <form method="post" action="">
+                <h1> CONTACT </h1>
+                <div class="block">
+                    <div class="inline">
+                        <label for="lastname"> Last Name </label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Enter your Last Name" required>
+                    </div>
+                    <div class="inline" >
+                        <label for="firstname"> First Name </label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Enter your First Name" required>
+                    </div>
+                </div>
+                
+                <div class="block">
+                    <div class="inline" >
+                        <label for="email"> Email </label>
+                        <input type="email" name="email" id="email"  placeholder="Enter your Email" required>
+                        
+                    </div>
+                    <div class="inline" >
+                        <label for="number"> Phone Number </label>
+                        <input type="number" name="number" id="number" placeholder="Enter your Phone Number" required>
+                    </div>
+                    
+                </div>
+                
+                <div class="inline">
+                     <label for="gender"> Gender </label>
+                        <select name="gender" id="gender">
+                            <option value="">Selectionez ...</option>
+                            <option value="male">Homme</option>
+                            <option value="female">Femme</option>
+                        </select>
+                </div>
+
+                <div class="inline">
+                    <label for="number"> Commentaire </label>
+                    <textarea name="message" id="message" placeholder="What do you think of this portfolio " ></textarea>
+                </div>
+                <button type="submit"> Envoyer </button>
+        </form>
+    </section>
+    
+</body>
+</html>
