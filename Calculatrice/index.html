@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  <title> calculator </title>
+
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="screen" readonly placeholder="Veuillez entrer vos operations" />
+        <div class="keys">
+            <button type="button" onclick="ClearDisplay()" value="C">C</button>
+            <button type="button" onclick="appendValue()" value="(">(</button>
+            <button type="button" onclick="appendValue()" value=")">)</button>
+            <button type="button" onclick="appendValue()" value="/">/</button>
+
+            <button type="button" onclick="appendValue()" value="1">1</button>
+            <button type="button" onclick="appendValue()" value="2">2</button>
+            <button type="button" onclick="appendValue()" value="3">3</button>
+            <button type="button" onclick="appendValue()" value="*">*</button>
+
+            <button type="button" onclick="appendValue()" value="4">4</button>
+            <button type="button" onclick="appendValue()" value="5">5</button>
+            <button type="button" onclick="appendValue()" value="6">6</button>
+            <button type="button" onclick="appendValue()" value="-">-</button>
+
+            <button type="button" onclick="appendValue()" value="7">7</button>
+            <button type="button" onclick="appendValue()" value="8">8</button>
+            <button type="button" onclick="appendValue()" value="9">9</button>
+            <button type="button" onclick="appendValue()" value="+">+</button>
+
+            <button type="button" onclick="appendValue()" value="0">0</button>
+            <button type="button" onclick="appendValue()" value=".">.</button>
+            <button type="button" onclick="deleteLast()" value="←">←</button>
+            <button type="button" onclick="calculateResult()" value="=">=</button>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
+
