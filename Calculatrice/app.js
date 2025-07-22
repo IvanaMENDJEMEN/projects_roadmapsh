@@ -1,22 +1,57 @@
+// variable pour stocker l'expression
+let expression = "";
 
-function appendValue(value) {
-  document.getElementById('display').value += value;
+// sélection de l'écran d'affichage
+const screen = document.getElementById("screen");
+
+// Ajout de texte depuis les boutons cliqués
+function appendValue(button) {
+  expression += button.innerText;
+  updateDisplay();
 }
 
-function clearDisplay() {
-  document.getElementById('display').value = '';
+// Mise à jour de l'affichage
+function updateDisplay() {
+  screen.value = expression;
 }
 
+function ClearDisplay() {
+  expression = "";
+  updateDisplay();
+}
+
+// Supprimer le dernier caractère (retour arrière)
 function deleteLast() {
-  const display = document.getElementById('display');
-  display.value = display.value.slice(0, -1);
+  expression = expression.slice(0, -1);
+  updateDisplay();
 }
 
+// Calcul du résultat (avec vérification)
 function calculateResult() {
-  const display = document.getElementById('display');
-  try {
-    display.value = eval(display.value);
-  } catch {
-    display.value = 'Erreur';
+  // Vérifie que les parenthèses sont bien équilibrées
+  if (!parenthesesAreBalanced(expression)) {
+    screen.value = "Erreur: parenthèses";
+    expression = "";
+    return;
   }
+
+  try {
+    const result = eval(expression);
+    expression = result.toString(); // on garde le résultat pour continuer
+    updateDisplay();
+  } catch (e) {
+    screen.value = "Erreur de calcul";
+    expression = "";
+  }
+}
+
+// Vérifie que les parenthèses sont équilibrées
+function parenthesesAreBalanced(expr) {
+  let count = 0;
+  for (let char of expr) {
+    if (char === "(") count++;
+    else if (char === ")") count--;
+    if (count < 0) return false;
+  }
+  return count === 0;
 }
