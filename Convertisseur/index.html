@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="/Convertisseur/images/golden-abacus-avec-des-pieces-d-chinoises-en-orgue-en-tant-que-fond.jpg" alt="image de conversion" id="image-convertisseur">
+    <div id="convertisseur">
+        <h1>Convertisseur de devise</h1>
+    
+        <form class="container-devise">
+            <div class="block-devise">
+                <label for="devise-start">Devise Source</label>
+                <select name="devise-start" id="devise-start" title="Devise source">
+                    <option value="">Choisir une devise...</option>
+                    <option value="EUR">EUR</option>
+                    <option value="USD">USD</option>
+                </select><br>
+                <input type="number" id="montant" placeholder="Montant">             
+            </div>
+
+            <div class="block-devise">
+                <label for="devise-end">Devise Cible</label>
+                <select name="devise-end" id="devise-end" title="Devise Cible">
+                    <option value="">Choisir une devise...</option>
+                    <option value="EUR">EUR</option>
+                    <option value="USD">USD</option>
+                </select>
+                <input type="number" id="resultat-conversion" placeholder="Montant Converti" disabled>             
+            </div>
+        </form>
+        <button id="convertbtn" type="button">Convertir</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
