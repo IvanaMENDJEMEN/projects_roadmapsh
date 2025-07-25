@@ -8,10 +8,16 @@ body {
     background-color: #f0f0f0;
     height: 100vh;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background-image: url('./images/golden-abacus-avec-des-pieces-d-chinoises-en-orgue-en-tant-que-fond.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
 }
+
 #image-convertisseur {
     position: relative;
     height: 100vh;
@@ -23,28 +29,18 @@ body {
     border-radius: 8px;
     max-width: 900px;
     width: 100%;
-    
+    position: absolute
 }
+
 #convertisseur h1 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
   color: #333;
 }
-.container-devise {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-label {
-    font-size: 16px;
-    color: #555;
-}
 
 .container-devise {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
   margin-bottom: 20px;
 }
@@ -87,7 +83,7 @@ input[type="number"]:focus, select:focus {
   display: block;
   width: 100%;
   padding: 12px;
-  background-color: #03b7c8;
+  background-color: #0b1e20;
   color: white;
   border: none;
   border-radius: 8px;
@@ -98,5 +94,5 @@ input[type="number"]:focus, select:focus {
 }
 
 #convertbtn:hover {
-  background-color: #0487ac;
+  background-color: #0a4f62;
 }
