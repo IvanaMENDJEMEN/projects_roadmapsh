@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+img {
+    height: 100vh;
+    width: 45%;
+}
+#jeu-devinette {
+    display: flex;
+    flex-direction: column;
+    background: #b07a04;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+}
+#jeu-devinette h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #f8f2f2;
+}
+#jeu-devinette p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #ffffff;
+}
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+input[type="number"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #11bfe680;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #005f7f;
+}
