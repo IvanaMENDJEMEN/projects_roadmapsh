@@ -22,20 +22,20 @@ function App() {
   }, [articles]);
 
   return (
-    <div>
-      <div className="container">
-        <h1>Mon Blog</h1>
-        <Routes>
-          <Route path="/" element={<Home articles={articles} />} />
-          <Route path="/ajouter" element={<AddArticle setArticles={setArticles} />} />
-          <Route path="/article/:id" element={<ArticleDetail articles={articles} />} /> 
-        </Routes>
-      </div>
+    <div className="blog">
       <div className="sidenav">
         <nav className="navbar">
           <Link to="/">Accueil</Link>
           <Link to="/ajouter">Ajouter un article</Link>
         </nav>
+      </div>
+      <div className="container">
+        <h1>Tech Blog</h1>
+        <Routes>
+          <Route path="/" element={<Home articles={articles} />} />
+          <Route path="/ajouter" element={<AddArticle setArticles={setArticles} />} />
+          <Route path="/article/:id" element={<ArticleDetail articles={articles} />} /> 
+        </Routes>
       </div>
       
     </div>

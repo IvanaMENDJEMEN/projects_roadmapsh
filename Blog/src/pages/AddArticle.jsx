@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './AddArticle.css';
 
  
 function AddArticle({ setArticles }) {
@@ -27,7 +28,7 @@ function AddArticle({ setArticles }) {
     e.preventDefault();
     console.log("Formulaire soumis");
       // Vérification automatique : tous les champs doivent être remplis
-    const champsVides = Object.entries(formulaire).filter(([_, val]) => val.trim() === '');
+    const champsVides = Object.entries(formulaire).filter(([, val]) => val.trim() === '');
 
     if (champsVides.length > 0) {
       setErreur("Veuillez remplir tous les champs du formulaire.");
@@ -63,50 +64,65 @@ function AddArticle({ setArticles }) {
   };
 
   return (
-    <div>
-      <h2>Ajouter un nouvel article</h2>
-      <form onSubmit={handleSubmit}>  
-        <input
-          type="text"
-          name='titre'
-          placeholder="Titre de l’article"
-          value={formulaire.titre}
-          onChange={(e) => handleChange(e)}
-        />
-        <br /><br />
-        <input
-          type="text"
-          name='categorie'
-          placeholder="Categorie de l’article"
-          value={formulaire.categorie}
-          onChange={(e) => handleChange(e)}
-        />
-        <br /><br />
-        <input
-          type="text"
-          name='auteur'
-          placeholder="Auteur de l’article"
-          value={formulaire.auteur}
-          onChange={(e) => handleChange(e)}
-        />
-        <br /><br />
-        <input
-          type="date"
-          name='date_publication'
-          placeholder="Date de publication"
-          value={formulaire.date_publication}
-          onChange={(e) => handleChange(e)}
-        />
-        <br /><br />
-        <textarea
-          name='contenu'
-          placeholder="Contenu de l’article"
-          value={formulaire.contenu}
-          onChange={(e) => handleChange(e)}
-          rows={6}
-          cols={40}
-        />
-        <br /><br />
+   <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <h2> NOUVEL ARTICLE</h2>
+        
+        {/* Champs du formulaire */}
+        <div className="form-group">
+          <label>Titre</label>
+          <input
+            type="text"
+            name="titre"
+            value={formulaire.titre}
+            onChange={handleChange}
+            placeholder="Titre de l’article"
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Catégorie</label>
+          <input
+            type="text"
+            name="categorie"
+            value={formulaire.categorie}
+            onChange={handleChange}
+            placeholder="Ex: React, Voyage, Cuisine"
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Auteur</label>
+          <input
+            type="text"
+            name="auteur"
+            value={formulaire.auteur}
+            onChange={handleChange}
+            placeholder="Nom de l’auteur"
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Date de publication</label>
+          <input
+            type="date"
+            name="date_publication"
+            value={formulaire.date_publication}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Contenu</label>
+          <textarea
+            name="contenu"
+            value={formulaire.contenu}
+            onChange={handleChange}
+            placeholder="Écris ton article ici..."
+            rows={15}
+          />
+        </div>
+
         <button type="submit">Ajouter</button>
       </form>
     </div>

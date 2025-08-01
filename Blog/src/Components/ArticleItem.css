@@ -1,0 +1,47 @@
+.article-card {
+  background-color: #dce5e2;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-left: 3px solid #38a90ef6;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article-card h3 {
+  margin: 0 0 5px;
+  font-size: 1.3rem;
+  color: #38a90ef6;
+}
+
+.article-card strong {
+  margin: 4px 0;
+  color: #2f2e2e;
+  font-size: 0.95rem;
+}
+.article-card p {
+  margin: 4px 0;
+  color: #655e5e;
+  font-size: 0.95rem;
+}
+
+.article-card a {
+  color: #d2b833ed;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.article-card a:hover {
+  text-decoration: underline;
+  color: #fbac96;
+}

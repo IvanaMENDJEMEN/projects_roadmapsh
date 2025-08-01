@@ -10,73 +10,61 @@
 
 body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: #dff7d68b;
+  background-color: #e7f2ed;
   margin: 0;
+}
+.blog {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
 }
 .sidenav {
   height: 100%;
   width: 15% ;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #dfe6de;
+  background-color: #1a5d02f6;
   overflow-x: hidden;
   padding-top: 20px;
   opacity: 0.8;
+  z-index: 1;
+  position: fixed;
 }
+
 .container {
+  margin-left: 15%;
   font-size: 28px; /* Increased text to enable scrolling */
+  background: #e7f2ed;
+  width: 85%;
+  position: absolute
 }
 .navbar {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #c7d2dd;
   padding: 10px 20px;
 }
 
-.nav a {
-  color: white;
+nav a {
   margin-right: 15px;
   text-decoration: none;
   font-weight: bold;
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: #e7f2ed;
+  font-size: 1.4em;
 }
 
 nav a:hover {
-  text-decoration: underline;
-  color: #535bf2;
+  color: #fbac96;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-h2 {
-  color: #333;
-}
-
-.container {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+  display: flex;
+  font-size: 2.7em;
+  padding: 10px 30px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  background-color: #333;
+  color: #e7f2ed;
 }
 
 input, textarea {
@@ -119,6 +107,22 @@ button:focus, button:focus-visible {
   font-weight: bold;
 }
 
+.nav-link {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link.active {
+  color: #FFD700;
+  border-bottom: 2px solid white;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
