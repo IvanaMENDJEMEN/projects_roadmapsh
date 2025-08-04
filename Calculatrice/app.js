@@ -6,8 +6,22 @@ const screen = document.getElementById("screen");
 
 // Ajout de texte depuis les boutons cliqués
 function appendValue(button) {
-  expression += button.innerText;
-  updateDisplay();
+  const dernierCaractere = expression.slice(-1);
+
+  if (estOperateur(dernierCaractere) && estOperateur(button.innerText)) {
+    // Remplace le dernier opérateur par le nouveau
+    expression = expression.slice(0, -1) + button.innerText;
+    updateDisplay();
+  } else {
+    // Sinon, on ajoute normalement
+    expression += button.innerText;
+    updateDisplay();
+  }
+
+}
+
+function estOperateur(caractere) {
+  return ['+', '-', '*', '/'].includes(caractere);
 }
 
 // Mise à jour de l'affichage
