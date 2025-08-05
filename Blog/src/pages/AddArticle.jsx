@@ -4,13 +4,18 @@ import './AddArticle.css';
 
  
 function AddArticle({ setArticles }) {
+  // State pour gérer le formulaire
   const [formulaire, setFormulaire] = useState({
     titre: "",
     categorie: "",
     auteur: "",
     date_publication: "",
+    image: null,
     contenu: "",
   });
+
+  // State pour gérer les erreurs
+  const [erreur, setErreur] = useState("");
 
   const navigate = useNavigate();
 
@@ -22,7 +27,24 @@ function AddArticle({ setArticles }) {
       [name]: value
     }));
   }
-  const [erreur, setErreur] = useState("");
+  const handleImageChange = (e) => {
+    const file = e.target.files[0]; // On récupère le fichier sélectionné
+
+    if (file) {
+      const reader = new FileReader(); // Crée un lecteur de fichier
+
+      reader.onloadend = () => {
+        // Quand le fichier est lu avec succès...
+        setFormulaire((prev) => ({
+          ...prev,
+          image: reader.result, // On enregistre le contenu base64 dans le state
+        }));
+      };
+
+      reader.readAsDataURL(file); // On demande de lire le fichier sous forme de base64
+    }
+  };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,8 +63,9 @@ function AddArticle({ setArticles }) {
       id: Date.now(), // identifiant unique
       titre: formulaire.titre,
       categorie: formulaire.categorie,  
-      auteur: formulaire.auteur,
+      auteur: formulaire.auteur, 
       date_publication: formulaire.date_publication || new Date().toISOString().split('T')[0], // date actuelle si non fournie
+      image: formulaire.image,
       contenu: formulaire.contenu,  
     };
 
@@ -56,6 +79,7 @@ function AddArticle({ setArticles }) {
       categorie: "",
       auteur: "",
       date_publication: "",
+      image: null,
       contenu: "",
     });
 
@@ -66,7 +90,7 @@ function AddArticle({ setArticles }) {
   return (
    <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <h2> NOUVEL ARTICLE</h2>
+        <h4> NOUVEL ARTICLE</h4>
         
         {/* Champs du formulaire */}
         <div className="form-group">
@@ -109,6 +133,16 @@ function AddArticle({ setArticles }) {
             name="date_publication"
             value={formulaire.date_publication}
             onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label>Image illustrative</label>
+          <input
+            type="file"
+            name="image"
+            accept="/images/*"
+            value={formulaire.image}
+            onChange={handleImageChange}
           />
         </div>
 

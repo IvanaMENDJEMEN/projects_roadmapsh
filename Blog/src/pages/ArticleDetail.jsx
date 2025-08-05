@@ -1,4 +1,6 @@
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './ArticleDetail.css';
 
 function ArticleDetail({ articles }) {
   const { id } = useParams(); // extrait l'id depuis l'URL
@@ -9,12 +11,22 @@ function ArticleDetail({ articles }) {
   }
 
   return (
-    <div>
-      <h2>{article.titre}</h2>
-      <p><strong>Auteur :</strong> {article.auteur}</p>
-      <p><strong>Contenu :</strong></p>
-      <p>{article.contenu}</p>
-      <p><em>Catégorie :</em> {article.categorie}</p>
+    <div className="article-detail">
+      <div className="article-banner">
+        <img src={article.image} alt="bannière" />
+        <h1 className="article-title">{article.titre}</h1>
+      </div>
+
+      <div className="article-meta">
+        <span><strong>Auteur :</strong> {article.auteur}</span>
+        <span><strong>Publié le :</strong> {new Date(article.date_publication).toLocaleDateString()}</span>
+        <span><strong>Catégorie :</strong> {article.categorie}</span>
+      </div>
+
+      <div className="article-content">
+        <p>{article.contenu}</p>
+      </div>
+      <button type='texte' className='bouton-retour'> <Link to="/">Accueil</Link> </button>
     </div>
   );
 }

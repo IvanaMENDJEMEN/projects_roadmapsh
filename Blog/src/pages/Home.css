@@ -1,27 +1,73 @@
+/* Mise en page principale */
 .home {
-    display: grid;
-    grid-template-columns: auto auto ;
-    margin-left: 3%;
-}
-h2 {
-    color: #333;
-    font-size: 1em;
-    margin-block-end: 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  max-width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
+/* Section Articles */
+.articles-card {
+  background-color: #eef0ee;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.articles-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #977506ed;
+  border-bottom: 2px solid #977506ed;
+  padding-bottom: 5px;
+}
+
+/* Section À propos */
 .about {
-    background-color: #dce5e2;
-    border-radius: 5px;
-    height: 400px;
-    margin: 14% 0 0 35%;
-    text-align: center;
-    width: 60%;
-    border-radius: 8px;
-    box-shadow: -2px -1px 2px 4px #dce5e2;
+  background-color: #f8fafb;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
+.about h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Listes */
 ul {
-  padding: 0;
   list-style: none;
-  margin-block-start: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive pour mobile/tablette */
+@media screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .about {
+    margin-top: 30px;
+  }
 }

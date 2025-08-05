@@ -1,10 +1,14 @@
 import './App.css'
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, NavLink} from 'react-router-dom';
 import Home from './pages/Home';
 import ArticleDetail from './pages/ArticleDetail';
 import AddArticle from './pages/AddArticle';
 import articlesInitiaux from './data';
+import Footer from './Components/Footer';
 import { useEffect, useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
+
+// Lundi  je dois gere l'image et commecer un autre projet 
 
 function App() {
   // State to hold articles
@@ -23,21 +27,29 @@ function App() {
 
   return (
     <div className="blog">
-      <div className="sidenav">
+      <header className="entete">
+        <div className="logo-titre">
+          <img src="/images/logo_blog.jpg" alt="Logo" />
+          <h1 className='blog-title'> Tech Blog </h1>
+        </div>
         <nav className="navbar">
-          <Link to="/">Accueil</Link>
-          <Link to="/ajouter">Ajouter un article</Link>
+          <NavLink to="/" className="nav-link">Accueil</NavLink>
+          <NavLink to="/ajouter" className="nav-link" >Ajouter un article</NavLink>
+          <div className="search-box">
+            <input type="text" placeholder="Rechercher un article..." />
+            <FaSearch className="search-icon" />
+          </div>
         </nav>
-      </div>
+       
+      </header>
       <div className="container">
-        <h1>Tech Blog</h1>
         <Routes>
           <Route path="/" element={<Home articles={articles} />} />
           <Route path="/ajouter" element={<AddArticle setArticles={setArticles} />} />
           <Route path="/article/:id" element={<ArticleDetail articles={articles} />} /> 
         </Routes>
       </div>
-      
+      <Footer />
     </div>
   )
 }

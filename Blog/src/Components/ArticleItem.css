@@ -1,47 +1,60 @@
 .article-card {
-  background-color: #dce5e2;
-  padding: 15px 20px;
-  border: 1px solid #ddd;
-  border-left: 3px solid #38a90ef6;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  background-color: #f3f8f3;
+  border-radius: 10px;
+  border-left: 3px solid #38a90e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  overflow: hidden;
   transition: transform 0.2s ease;
-
+  margin-bottom: 24px;
 }
 
 .article-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.article-card h3 {
-  margin: 0 0 5px;
+.article-image img {
+  width: 160px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.article-content {
+  padding: 16px;
+  flex: 1;
+}
+
+.article-content h3 {
+  margin: 0 0 8px;
+  color: #38a90e;
   font-size: 1.3rem;
-  color: #38a90ef6;
 }
 
-.article-card strong {
-  margin: 4px 0;
-  color: #2f2e2e;
-  font-size: 0.95rem;
-}
-.article-card p {
-  margin: 4px 0;
-  color: #655e5e;
-  font-size: 0.95rem;
+.article-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.article-card a {
-  color: #d2b833ed;
-  font-size: 1.1rem;
+.article-extrait {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.read-more {
   font-weight: bold;
+  color: #977506ed;
   text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
+  font-size: 1rem;
 }
 
-.article-card a:hover {
+.read-more:hover {
+  color: #38a90e;
   text-decoration: underline;
-  color: #fbac96;
 }
