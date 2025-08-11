@@ -14,8 +14,8 @@ function ArticleItem({ article }) {
         
         <div className="article-meta">
           <span>{article.categorie}</span>
-          <span>; {article.auteur}</span>
-          <span>, {new Date(article.date_publication).toLocaleDateString()}</span>
+          <span> {article.auteur}</span>
+          <span> {new Date(article.date_publication).toLocaleDateString()}</span>
         </div>
 
         <p className="article-extrait">{article.contenu.slice(0, 300)}...</p>

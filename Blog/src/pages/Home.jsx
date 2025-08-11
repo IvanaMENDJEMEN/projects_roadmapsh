@@ -6,7 +6,7 @@ function Home ({ articles }) {
     <div className="home">
       <div className="articles-card">
         <h2>Articles récents</h2>
-      <ul style={{ listStyle: 'none', padding: 0 }}>
+      <ul>
         {articles.map(article => (
           <ArticleItem key={article.id} article={article} />
         ))}
@@ -14,7 +14,13 @@ function Home ({ articles }) {
       </div>
       
       <div className="about">
-        <h3>À propos de moi</h3>
+        <h3>À propos </h3>
+        <p>
+          Bienvenue sur ce blog dédié aux nouvelles technologies, au développement web et à l’innovation informatique. 
+          Ici, je partage des articles, des tutoriels et des réflexions pour aider les passionnés et les professionnels à approfondir leurs connaissances 
+          et rester à jour dans un domaine en constante évolution
+        </p>
+        
       </div>
     </div>
   );

@@ -3,12 +3,10 @@ import { Routes, Route, Link, NavLink} from 'react-router-dom';
 import Home from './pages/Home';
 import ArticleDetail from './pages/ArticleDetail';
 import AddArticle from './pages/AddArticle';
-import articlesInitiaux from './data';
 import Footer from './Components/Footer';
 import { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
-// Lundi  je dois gere l'image et commecer un autre projet 
 
 function App() {
   // State to hold articles
@@ -17,7 +15,7 @@ function App() {
       Utilise une fonction de chargement pour éviter de charger les articles à chaque rendu
       Cela permet de ne pas charger les articlesInitiaux à chaque fois que le composant */
     const storedArticles = localStorage.getItem('articles');
-    return storedArticles ? JSON.parse(storedArticles) || [] : articlesInitiaux;
+    return storedArticles ? JSON.parse(storedArticles) : [];
   });
 
   useEffect(() => { 

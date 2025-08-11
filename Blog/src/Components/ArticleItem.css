@@ -16,9 +16,9 @@
 
 .article-image img {
   width: 160px;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  height: 100% ; /* fixe la hauteur pour un ratio proche 4:3 */
+  object-fit: cover; /* rogne l'excès mais garde le ratio */
+  border-radius: 6px;
 }
 
 .article-content {

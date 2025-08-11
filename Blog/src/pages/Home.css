@@ -27,37 +27,42 @@
   border-bottom: 2px solid #977506ed;
   padding-bottom: 5px;
 }
-
-/* Section À propos */
-.about {
-  background-color: #f8fafb;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  height: fit-content;
-  text-align: center;
-  max-width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-.about h3 {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.about p {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Listes */
-ul {
+.articles-card ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+/* Section À propos */
+.about {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-left: 40px;
+  max-width: 400px;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.about h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #2c6f48;
+  font-weight: 700;
+  border-bottom: 2px solid #38a90e;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.about p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #555;
+  text-align: justify;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Responsive pour mobile/tablette */

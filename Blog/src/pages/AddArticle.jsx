@@ -27,6 +27,7 @@ function AddArticle({ setArticles }) {
       [name]: value
     }));
   }
+  //Fonction pour traiter le changement de l'image
   const handleImageChange = (e) => {
     const file = e.target.files[0]; // On récupère le fichier sélectionné
 
@@ -50,7 +51,8 @@ function AddArticle({ setArticles }) {
     e.preventDefault();
     console.log("Formulaire soumis");
       // Vérification automatique : tous les champs doivent être remplis
-    const champsVides = Object.entries(formulaire).filter(([, val]) => val.trim() === '');
+    const champsVides = Object.entries(formulaire).filter(([, val]) => !val || (typeof val === "string" && val.trim() === ''));
+    // Si des champs sont vides, on affiche une erreur);
 
     if (champsVides.length > 0) {
       setErreur("Veuillez remplir tous les champs du formulaire.");
@@ -140,8 +142,7 @@ function AddArticle({ setArticles }) {
           <input
             type="file"
             name="image"
-            accept="/images/*"
-            value={formulaire.image}
+            accept="image/*"
             onChange={handleImageChange}
           />
         </div>
@@ -152,11 +153,17 @@ function AddArticle({ setArticles }) {
             name="contenu"
             value={formulaire.contenu}
             onChange={handleChange}
-            placeholder="Écris ton article ici..."
+            placeholder="
+              Introduction générale du sujet.
+              ## Sous-titre 1
+              Explication détaillée de ce sous-titre.
+
+              ## Sous-titre 2
+              Autre contenu explicatif."
             rows={15}
           />
         </div>
-
+        
         <button type="submit">Ajouter</button>
       </form>
     </div>

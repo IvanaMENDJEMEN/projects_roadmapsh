@@ -30,7 +30,7 @@
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
-.article-meta {
+.article-meta-detail {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -50,6 +50,19 @@
   margin-top: 30px;
   line-height: 1.7;
   font-size: 1rem;
+}
+.article-content h3 {
+  color: #38a90e;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+.article-content p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #444;
 }
 .bouton-retour {
   background-color: #4CAF50;
