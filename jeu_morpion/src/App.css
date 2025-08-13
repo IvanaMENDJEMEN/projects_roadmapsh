@@ -1,6 +1,7 @@
 *{
   background-color: black;
   color: white;
+  overflow: hidden;
 }
 .app {
   display: flex;
@@ -11,28 +12,72 @@
 }
 .app-title {
   text-align: center;
+  text-shadow: -4px 4px 3px rgba(228, 120, 255, 0.5);
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .game-area {
-  margin-top: 20px;
+  max-width: 600px;
+}
+.game-area h2 {
+  text-align: center;
+  font-size: 1.2em;
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  gap: 5px;
+  row-gap: 5px;
+  column-gap: 5px;
   justify-content: center;
-  margin-top: 20px;
+  margin: 15px;
+  border: 2px solid #333;
+  box-shadow: -2px 2px 8px rgba(165, 22, 201, 0.5), 2px -2px 8px rgba(144, 30, 175, 0.717)
 }
 
 .cell {
   width: 100px;
   height: 100px;
-  border: 2px solid #333;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 48px;
   cursor: default;
+  box-shadow: -2px 2px 8px rgba(165, 22, 201, 0.5), 2px -2px 8px rgba(144, 30, 175, 0.717);
+  background: linear-gradient(90deg, #cfcf0f, #beb923, #cdcd30);
+  background-clip: text;
+  -webkit-background-clip: text; /* Nécessaire pour Chrome/Safari */
+  color: transparent; /* Cache la couleur du texte pour ne voir que le dégradé */
+  font-weight: bold;
+}
+.game-area h3{
+  text-align: center;
+  font-size: 1.25em;
+}
+.text-match-nul h3{
+  color: bisque;
+}
+.text-match-gagne h3{
+  color: greenyellow;
+}
+.text-prochain-tour{
+  color: aquamarine;
+}
+.game-area button {
+  padding: 10px;
+  background-color: #d000ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.4s ease;
+  font-weight: bold;
+  margin: 5px;
+}
+.game-area button:hover {
+  background-color: #c00cd4;
+  transform: scale(0.95);
 }
 
 @media (prefers-reduced-motion: no-preference) {

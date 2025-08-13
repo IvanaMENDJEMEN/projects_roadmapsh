@@ -16,7 +16,7 @@ function PlayerForm({ onStart }) {
 
   return (
     <form className="player-form" onSubmit={handleSubmit}>
-      <h2>Entrer le nom des joueurs</h2>
+      <h2>Entrez les noms des joueurs</h2>
       <input
         type="text"
         placeholder="Nom du joueur A (X)"

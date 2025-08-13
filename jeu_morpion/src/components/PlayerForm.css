@@ -2,22 +2,24 @@
   background-color: black;
   padding: 20px;
   border-radius: 10px;
-  max-width: 300px;
-  margin: auto;
+  max-width: 400px;
+  margin: 40px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  box-shadow: -4px 4px 8px rgba(157, 39, 190, 0.717),4px -4px 8px rgba(149, 32, 181, 0.717) ;
 }
 
 .player-form h2 {
   text-align: center;
+  margin: 10px;
 }
 
 .player-form input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 0.85em;
 }
 
 .player-form button {
@@ -27,8 +29,12 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
+  transition: 0.4s ease;
+  font-weight: 600;
 }
 
 .player-form button:hover {
   background-color: #c00cd4;
+  transform: scale(0.95);
 }
