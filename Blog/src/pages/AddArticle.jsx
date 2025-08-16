@@ -164,7 +164,7 @@ function AddArticle({ setArticles }) {
           />
         </div>
         
-        <button type="submit">Ajouter</button>
+        <button type="submit" className='form-group-button'>Ajouter</button>
       </form>
     </div>
   );

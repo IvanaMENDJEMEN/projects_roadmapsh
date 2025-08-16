@@ -1,0 +1,44 @@
+.message {
+  max-width: 70%;
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  position: relative;
+}
+
+/* Messages envoyés (à droite) */
+.message-sent {
+  background-color: #af4c74;       
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 5px rgba(128, 0, 45, 0.3);
+}
+
+/* Messages reçus (à gauche) */
+.message-received {
+  background-color: #f1f0f0;       
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.message-text {
+  display: block;
+  margin-bottom: 5px; /* Pas de marge, on laisse place à l’heure */
+}
+
+/* Heure du message */
+.message-time {
+  font-size: 0.70rem;
+  color: #baaeae;
+  text-align: right;
+  right: 15px;
+  bottom: 0;
+  font-weight: 500;
+  position: absolute;
+}

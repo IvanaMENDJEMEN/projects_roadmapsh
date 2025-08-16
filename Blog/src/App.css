@@ -97,24 +97,12 @@ nav a:hover {
   font-size: 1rem;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
 .nav-link {
   color: white;
   margin-right: 20px;
   text-decoration: none;
   font-weight: bold;
   padding-bottom: 4px;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
 }
 
 .nav-link.active {
@@ -131,9 +119,6 @@ input, textarea {
   border-bottom: 2px solid white;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
