@@ -1,0 +1,58 @@
+/* [project]/components/Footer/Footer.css [app-client] (css) */
+.footer {
+  color: #fff;
+  background-color: #2f9343;
+  margin-top: 20px;
+  padding: 30px 20px 20px;
+}
+
+.footer-content {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+
+.footer-section h4 {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.footer-section p {
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: .95rem;
+  display: flex;
+}
+
+.social-links a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: transform .3s;
+}
+
+.social-links a:hover {
+  color: gold;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  opacity: .8;
+  border-top: 1px solid rgba(255, 255, 255, .25);
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: .85rem;
+}
+
+.icon {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=components_Footer_Footer_f613c91f.css.map*/

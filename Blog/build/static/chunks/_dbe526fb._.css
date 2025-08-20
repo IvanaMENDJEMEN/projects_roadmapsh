@@ -1,0 +1,197 @@
+/* [project]/src/App.css [app-client] (css) */
+#root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  line-height: 1.5;
+}
+
+html, body {
+  background-color: #eef0ee;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  overflow-x: hidden;
+}
+
+.blog {
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+}
+
+.entete {
+  color: #fff;
+  background-color: #2f9343;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 12px 30px;
+  display: flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+.logo-titre {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.logo-titre img {
+  width: 40px;
+  height: 40px;
+}
+
+.blog-title {
+  text-shadow: 4px 4px 9px rgba(46, 59, 47, .855);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 10px 20px;
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #4c522f;
+}
+
+.container {
+  width: 100%;
+  font-size: 28px;
+}
+
+.search-box {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.search-box input {
+  border: none;
+  border-radius: 20px;
+  padding: 8px 32px 8px 10px;
+  font-size: .8rem;
+}
+
+.search-icon {
+  color: #2f9343;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 1rem;
+  position: absolute;
+  right: 10px;
+}
+
+.nav-link {
+  color: #fff;
+  margin-right: 20px;
+  padding-bottom: 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: gold;
+  border-bottom: 2px solid #fff;
+}
+
+.nav-links {
+  gap: 20px;
+  display: flex;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #fff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* [project]/Components/Footer.css [app-client] (css) */
+.footer {
+  color: #fff;
+  background-color: #2f9343;
+  margin-top: 20px;
+  padding: 30px 20px 20px;
+}
+
+.footer-content {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+
+.footer-section h4 {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.footer-section p {
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: .95rem;
+  display: flex;
+}
+
+.social-links a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: transform .3s;
+}
+
+.social-links a:hover {
+  color: gold;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  opacity: .8;
+  border-top: 1px solid rgba(255, 255, 255, .25);
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: .85rem;
+}
+
+.icon {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=_dbe526fb._.css.map*/

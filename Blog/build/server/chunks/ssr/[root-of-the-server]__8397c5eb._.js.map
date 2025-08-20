@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/FBI-STORE/Documents/mini_projet_FE/projects_roadmapsh/Blog/app/context/ArticleContext.js"],"sourcesContent":["// app/context/ArticleContext.tsx (ou .js)\r\n'use client';\r\n\r\nimport { createContext, useContext, useState } from 'react';\r\n\r\nconst ArticleContext = createContext();\r\n\r\nexport const ArticleProvider = ({ children }) => {\r\n  const [articles, setArticles] = useState([]);\r\n\r\n  return (\r\n    <ArticleContext.Provider value={{ articles, setArticles }}>\r\n      {children}\r\n    </ArticleContext.Provider>\r\n  );\r\n};\r\n\r\nexport const useArticles = () => useContext(ArticleContext);\r\n"],"names":[],"mappings":"AAAA,0CAA0C;;;;;;AAG1C;AAFA;;;AAIA,MAAM,+BAAiB,CAAA,GAAA,qMAAA,CAAA,gBAAa,AAAD;AAE5B,MAAM,kBAAkB,CAAC,EAAE,QAAQ,EAAE;IAC1C,MAAM,CAAC,UAAU,YAAY,GAAG,CAAA,GAAA,qMAAA,CAAA,WAAQ,AAAD,EAAE,EAAE;IAE3C,qBACE,8OAAC,eAAe,QAAQ;QAAC,OAAO;YAAE;YAAU;QAAY;kBACrD;;;;;;AAGP;AAEO,MAAM,cAAc,IAAM,CAAA,GAAA,qMAAA,CAAA,aAAU,AAAD,EAAE","debugId":null}}]
+}

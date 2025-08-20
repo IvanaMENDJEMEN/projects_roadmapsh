@@ -1,0 +1,63 @@
+/* [project]/components/ArticleItem/ArticleItem.css [app-client] (css) */
+.article-card {
+  background-color: #f3f8f3;
+  border-left: 3px solid #38a90e;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  transition: transform .2s;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .06);
+}
+
+.article-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+}
+
+.article-image img {
+  object-fit: cover;
+  border-radius: 6px;
+  width: 160px;
+  height: 100%;
+}
+
+.article-content {
+  flex: 1;
+  padding: 16px;
+}
+
+.article-content h3 {
+  color: #38a90e;
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.article-meta {
+  color: #666;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: .9rem;
+  display: flex;
+}
+
+.article-extrait {
+  color: #444;
+  margin-bottom: 12px;
+  font-size: .95rem;
+}
+
+.read-more {
+  color: rgba(151, 117, 6, .93);
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  color: #38a90e;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=components_ArticleItem_ArticleItem_051c8841.css.map*/

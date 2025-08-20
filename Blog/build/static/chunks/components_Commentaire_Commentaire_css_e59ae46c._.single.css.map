@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Commentaire/Commentaire.css"],"sourcesContent":[".message {\r\n  max-width: 70%;\r\n  margin: 5px 0;\r\n  padding: 5px 10px;\r\n  border-radius: 15px;\r\n  display: inline-block;\r\n  font-family: Arial, sans-serif;\r\n  font-size: 0.9rem;\r\n  word-wrap: break-word;\r\n  background-color: #f1f0f0;       \r\n  color: #333;\r\n  align-self: flex-end;\r\n  border-bottom-left-radius: 0;\r\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.message-texte {\r\n  display: block;\r\n  margin-bottom: 5px; /* Pas de marge, on laisse place au pseudo */\r\n}\r\n\r\n.message-pseudo {\r\n  font-size: 0.70rem;\r\n  color: #baaeae;\r\n  text-align: right;\r\n  right: 15px;\r\n  font-weight: 500;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;AAgBA;;;;;AAKA"}}]
+}

@@ -1,0 +1,16 @@
+/* [project]/src/index.css [app-client] (css) */
+html, body {
+  background-color: #eef0ee;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#root {
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+/*# sourceMappingURL=src_index_a80815d4.css.map*/
