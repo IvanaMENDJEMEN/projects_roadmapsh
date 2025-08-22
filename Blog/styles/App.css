@@ -105,7 +105,7 @@ nav a:hover {
   padding-bottom: 4px;
 }
 
-.nav-link.active {
+.active {
   color: #FFD700;
   border-bottom: 2px solid white;
 }
@@ -115,9 +115,6 @@ nav a:hover {
   gap: 20px;
 }
 
-.nav-link.active {
-  border-bottom: 2px solid white;
-}
 
 
 @media (prefers-color-scheme: light) {

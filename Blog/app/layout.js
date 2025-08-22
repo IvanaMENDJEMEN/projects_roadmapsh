@@ -3,12 +3,14 @@ import { FaSearch } from "react-icons/fa"
 import Footer from "../components/Footer/Footer"
 import { ArticleProvider } from './context/ArticleContext'
 import '../styles/App.css';
+import LinkItem from "../components/LinkItem";
 
 export const metadata = {
   title: 'Tech Blog',
   description: 'Blog pour nouveles technologies',
 }
 export default function RootLayout({ children }) {
+
     return (
         <html lang="en">
             <body>
@@ -19,8 +21,8 @@ export default function RootLayout({ children }) {
                             <h1 className='blog-title'> Tech Blog </h1>
                         </div>
                         <nav className="navbar">
-                            <Link href="/" className="nav-link">Accueil</Link>
-                            <Link href="/ajouter" className="nav-link" >Ajouter un article</Link>
+                            <LinkItem href="/" label='Accueil'/>
+                            <LinkItem href="/ajouter" label='Ajouter un article'/>
                             <div className="search-box">
                                 <input type="text" placeholder="Rechercher un article..." />
                                 <FaSearch className="search-icon" />

@@ -1,14 +1,14 @@
 {
   "pages": {
     "/article/[id]/page": [
-      "static/chunks/node_modules_next_dist_0b2f5121._.js",
-      "static/chunks/_2ddc09d0._.js",
+      "static/chunks/node_modules_next_37412b3f._.js",
+      "static/chunks/_c1384a7a._.js",
       "static/chunks/_19c859ce._.css",
       "static/chunks/app_layout_68b267f5.js",
-      "static/chunks/node_modules_next_dist_client_components_builtin_global-error_4a07bae3.js",
-      "static/chunks/_f1f61b0d._.js",
+      "static/chunks/node_modules_next_dist_client_components_builtin_global-error_e8f984b7.js",
+      "static/chunks/_cd83446c._.js",
       "static/chunks/_69dbbe42._.css",
-      "static/chunks/app_article_[id]_page_4a07bae3.js",
+      "static/chunks/app_article_[id]_page_e8f984b7.js",
       "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_6aaa83c7._.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc06._.js",
       "static/chunks/node_modules_next_dist_compiled_next-devtools_index_d575f738.js",

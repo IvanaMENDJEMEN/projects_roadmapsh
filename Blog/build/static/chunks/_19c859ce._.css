@@ -165,7 +165,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-.nav-link.active {
+.active {
   color: gold;
   border-bottom: 2px solid #fff;
 }
@@ -173,10 +173,6 @@ nav a:hover {
 .nav-links {
   gap: 20px;
   display: flex;
-}
-
-.nav-link.active {
-  border-bottom: 2px solid #fff;
 }
 
 @media (prefers-color-scheme: light) {

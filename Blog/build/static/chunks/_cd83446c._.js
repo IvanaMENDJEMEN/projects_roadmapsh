@@ -128,17 +128,17 @@ const ArticleDetail = (param)=>{
     const [pseudo, setPseudo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [texte, setTexte] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [commentaires, setCommentaires] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    console.log('Article', article);
-    console.log('Article', article);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ArticleDetail.useEffect": ()=>{
-            const fetchdata = {
-                "ArticleDetail.useEffect.fetchdata": ()=>{
+            const fetchcommmentaire = {
+                "ArticleDetail.useEffect.fetchcommmentaire": ()=>{
                     const savedCommentaires = localStorage.getItem('commentaires');
-                    savedCommentaires ? setCommentaires(JSON.parse(savedCommentaires)) : setCommentaires([]);
+                    console.log('Listes Commentaire', savedCommentaires);
+                    return JSON.parse(savedCommentaires);
                 }
-            }["ArticleDetail.useEffect.fetchdata"];
-            fetchdata();
+            }["ArticleDetail.useEffect.fetchcommmentaire"];
+            const Comment = fetchcommmentaire();
+            console.log('Comment', Comment);
         }
     }["ArticleDetail.useEffect"], []);
     // Mettre à jour le localStorage chaque fois que les messages changent
@@ -179,7 +179,7 @@ const ArticleDetail = (param)=>{
                         alt: "bannière"
                     }, void 0, false, {
                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                        lineNumber: 53,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -187,13 +187,13 @@ const ArticleDetail = (param)=>{
                         children: article.titre
                     }, void 0, false, {
                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                        lineNumber: 54,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                lineNumber: 52,
+                lineNumber: 51,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -205,11 +205,28 @@ const ArticleDetail = (param)=>{
                                 children: "Auteur :"
                             }, void 0, false, {
                                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                lineNumber: 58,
+                                lineNumber: 57,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             " ",
                             article.auteur
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/ArticleItem/detailsArticle.js",
+                        lineNumber: 57,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                children: "Publié le :"
+                            }, void 0, false, {
+                                fileName: "[project]/components/ArticleItem/detailsArticle.js",
+                                lineNumber: 58,
+                                columnNumber: 15
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            " ",
+                            new Date(article.date_publication).toLocaleDateString()
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
@@ -219,27 +236,10 @@ const ArticleDetail = (param)=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                children: "Publié le :"
-                            }, void 0, false, {
-                                fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                lineNumber: 59,
-                                columnNumber: 15
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            " ",
-                            new Date(article.date_publication).toLocaleDateString()
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                        lineNumber: 59,
-                        columnNumber: 9
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                 children: "Catégorie :"
                             }, void 0, false, {
                                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                lineNumber: 60,
+                                lineNumber: 59,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             " ",
@@ -247,13 +247,13 @@ const ArticleDetail = (param)=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                        lineNumber: 60,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                lineNumber: 57,
+                lineNumber: 56,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -262,12 +262,12 @@ const ArticleDetail = (param)=>{
                     contenu: article.contenu
                 }, void 0, false, {
                     fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                    lineNumber: 64,
+                    lineNumber: 63,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                lineNumber: 63,
+                lineNumber: 62,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -277,7 +277,7 @@ const ArticleDetail = (param)=>{
                         children: "Commentaires"
                     }, void 0, false, {
                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                        lineNumber: 67,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     commentaires.filter((msg)=>msg.key === id).length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -291,7 +291,7 @@ const ArticleDetail = (param)=>{
                                         children: msg.date
                                     }, void 0, false, {
                                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                        lineNumber: 77,
+                                        lineNumber: 76,
                                         columnNumber: 34
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Commentaire$2f$Commentaire$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -299,19 +299,19 @@ const ArticleDetail = (param)=>{
                                         texte: msg.texte
                                     }, msg.id, false, {
                                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                        lineNumber: 78,
+                                        lineNumber: 77,
                                         columnNumber: 21
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, index, true, {
                                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                lineNumber: 76,
+                                lineNumber: 75,
                                 columnNumber: 19
                             }, ("TURBOPACK compile-time value", void 0));
                         })
                     }, void 0, false, {
                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                        lineNumber: 70,
+                        lineNumber: 69,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)) : null,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -325,7 +325,7 @@ const ArticleDetail = (param)=>{
                                 onChange: (e)=>setPseudo(e.target.value)
                             }, void 0, false, {
                                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                lineNumber: 91,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -340,7 +340,7 @@ const ArticleDetail = (param)=>{
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                lineNumber: 97,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -348,19 +348,19 @@ const ArticleDetail = (param)=>{
                                 children: "Ajouter"
                             }, void 0, false, {
                                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                                lineNumber: 108,
+                                lineNumber: 107,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                        lineNumber: 90,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                lineNumber: 66,
+                lineNumber: 65,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -373,20 +373,20 @@ const ArticleDetail = (param)=>{
                         children: "Accueil"
                     }, void 0, false, {
                         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                        lineNumber: 111,
+                        lineNumber: 110,
                         columnNumber: 55
                     }, ("TURBOPACK compile-time value", void 0)),
                     " "
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ArticleItem/detailsArticle.js",
-                lineNumber: 111,
+                lineNumber: 110,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/ArticleItem/detailsArticle.js",
-        lineNumber: 51,
+        lineNumber: 50,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -408,6 +408,7 @@ __turbopack_context__.s({
     "default": ()=>__TURBOPACK__default__export__
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ArticleItem$2f$detailsArticle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ArticleItem/detailsArticle.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$ArticleContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/context/ArticleContext.js [app-client] (ecmascript)");
 ;
@@ -415,10 +416,11 @@ var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
-function ArticleDetailsPage(param) {
-    let { params } = param;
+;
+function ArticleDetailsPage() {
     _s();
     const { articles } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$ArticleContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useArticles"])();
+    const params = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
     const id = params.id;
     console.log('Liste Articles', articles);
     const article = articles.find((a)=>a.id === Number(id)); // cherche l'article par ID
@@ -428,7 +430,7 @@ function ArticleDetailsPage(param) {
             children: " Article introuvable"
         }, void 0, false, {
             fileName: "[project]/app/article/[id]/page.js",
-            lineNumber: 13,
+            lineNumber: 15,
             columnNumber: 12
         }, this);
     }
@@ -437,13 +439,14 @@ function ArticleDetailsPage(param) {
         article: article
     }, void 0, false, {
         fileName: "[project]/app/article/[id]/page.js",
-        lineNumber: 17,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
-_s(ArticleDetailsPage, "eIzB71ZWvEF8RcZxZA1GwehAuTs=", false, function() {
+_s(ArticleDetailsPage, "JTBjHTJqTVzXIehJa8ljg9DFgpY=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$ArticleContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useArticles"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$ArticleContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useArticles"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"]
     ];
 });
 _c = ArticleDetailsPage;

@@ -1,0 +1,38 @@
+.entete {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbf5fd;
+  padding: 0 10em;
+  color: rgb(20, 19, 19);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+.tabs-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    align-items: center;
+    list-style: none;
+    gap: 3em;
+}
+.nav-link {
+  color: black;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+.nav-link:hover {
+  color: #b9a327;
+  transform: translateY(-1px); 
+}
+
+.active {
+  color: #b350ec;
+  border-bottom: 2px solid #3d1240;
+}

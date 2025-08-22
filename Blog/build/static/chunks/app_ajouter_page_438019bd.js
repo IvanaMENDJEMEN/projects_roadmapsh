@@ -10,18 +10,19 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/router.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$ArticleContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/context/ArticleContext.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
 ;
-function AddArticle(param) {
-    let { setArticles } = param;
+;
+function AddArticle() {
     _s();
-    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    // State pour gérer le formulaire
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const { setArticles } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$ArticleContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useArticles"])([]);
     const [formulaire, setFormulaire] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         titre: "",
         categorie: "",
@@ -32,7 +33,6 @@ function AddArticle(param) {
     });
     // State pour gérer les erreurs
     const [erreur, setErreur] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const navigate = useNavigate();
     // Fonction générique pour tous les champs
     const handleChange = (e)=>{
         const { name, value } = e.target;
@@ -81,7 +81,6 @@ function AddArticle(param) {
             contenu: formulaire.contenu
         };
         // Ajouter le nouvel article à la liste des articles
-        // setArticles([...articles, nouvelArticle]);
         setArticles((prevArticles)=>[
                 ...prevArticles,
                 nouvelArticle
@@ -96,7 +95,7 @@ function AddArticle(param) {
             contenu: ""
         });
         // Redirection vers la page d’accueil
-        navigate("/");
+        router.push('/');
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "form-container",
@@ -107,7 +106,7 @@ function AddArticle(param) {
                     children: " NOUVEL ARTICLE"
                 }, void 0, false, {
                     fileName: "[project]/app/ajouter/page.js",
-                    lineNumber: 97,
+                    lineNumber: 95,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -117,7 +116,7 @@ function AddArticle(param) {
                             children: "Titre"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 101,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -128,13 +127,13 @@ function AddArticle(param) {
                             placeholder: "Titre de l’article"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 102,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/ajouter/page.js",
-                    lineNumber: 100,
+                    lineNumber: 98,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -144,7 +143,7 @@ function AddArticle(param) {
                             children: "Catégorie"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 112,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -155,13 +154,13 @@ function AddArticle(param) {
                             placeholder: "Ex: React, Voyage, Cuisine"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 113,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/ajouter/page.js",
-                    lineNumber: 111,
+                    lineNumber: 109,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -171,7 +170,7 @@ function AddArticle(param) {
                             children: "Auteur"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 123,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -182,13 +181,13 @@ function AddArticle(param) {
                             placeholder: "Nom de l’auteur"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 124,
+                            lineNumber: 122,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/ajouter/page.js",
-                    lineNumber: 122,
+                    lineNumber: 120,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -198,7 +197,7 @@ function AddArticle(param) {
                             children: "Date de publication"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 134,
+                            lineNumber: 132,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -208,13 +207,13 @@ function AddArticle(param) {
                             onChange: handleChange
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 135,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/ajouter/page.js",
-                    lineNumber: 133,
+                    lineNumber: 131,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -224,7 +223,7 @@ function AddArticle(param) {
                             children: "Image illustrative"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 143,
+                            lineNumber: 141,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -234,13 +233,13 @@ function AddArticle(param) {
                             onChange: handleImageChange
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 144,
+                            lineNumber: 142,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/ajouter/page.js",
-                    lineNumber: 142,
+                    lineNumber: 140,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -250,7 +249,7 @@ function AddArticle(param) {
                             children: "Contenu"
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 153,
+                            lineNumber: 151,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -261,13 +260,13 @@ function AddArticle(param) {
                             rows: 15
                         }, void 0, false, {
                             fileName: "[project]/app/ajouter/page.js",
-                            lineNumber: 154,
+                            lineNumber: 152,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/ajouter/page.js",
-                    lineNumber: 152,
+                    lineNumber: 150,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -276,24 +275,25 @@ function AddArticle(param) {
                     children: "Ajouter"
                 }, void 0, false, {
                     fileName: "[project]/app/ajouter/page.js",
-                    lineNumber: 169,
+                    lineNumber: 167,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/ajouter/page.js",
-            lineNumber: 96,
+            lineNumber: 94,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/ajouter/page.js",
-        lineNumber: 95,
+        lineNumber: 93,
         columnNumber: 4
     }, this);
 }
-_s(AddArticle, "DGSGu89Bc84REkM/NU6VcE0i1sE=", true, function() {
+_s(AddArticle, "Bs2ZeLMlzMrC2KGO8oxm0sLmXe0=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$ArticleContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useArticles"]
     ];
 });
 _c = AddArticle;
