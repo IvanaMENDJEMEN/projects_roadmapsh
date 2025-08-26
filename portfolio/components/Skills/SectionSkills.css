@@ -2,16 +2,20 @@
     background-color: white;
     padding-top: 20px;
 }
-.section-skill-title h1 {
+.section-skill-title {
     font-size: 2rem;
     font-weight: 500;
-    margin: 0;
     line-height: 1.2;
     text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(201, 196, 196, 0.932);
+    text-transform: uppercase;
 }
+
 .section-skill-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*  auto responsive */
-    gap: 15px;
-    margin-top: 30px
+    display: flex;
+    flex-wrap: wrap;          /* permet le retour à la ligne */
+    gap: 20px;                /* espace entre les cards */
+    justify-content: center;
+    padding: 20px;
 }

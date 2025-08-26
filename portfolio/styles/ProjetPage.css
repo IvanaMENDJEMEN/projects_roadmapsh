@@ -1,0 +1,41 @@
+.projects-page {
+  padding: 60px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.section-intro {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 40px;
+}
+
+/* Grille responsive */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .projects-page {
+    padding: 40px 10px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-intro {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+}

@@ -164,7 +164,7 @@ function AddArticle() {
           />
         </div>
         
-        <button type="submit" className='form-group-button'>Ajouter</button>
+        <button type="submit" className='form-group-button'>Publier un article</button>
       </form>
     </div>
   );

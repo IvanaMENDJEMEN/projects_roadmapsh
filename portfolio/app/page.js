@@ -2,6 +2,7 @@
 import SectionProfil from '../components/Profil/SectionProfil'
 import SectionAPropos from '../components/APropos/SectionAPropos'
 import SectionSkills from '../components/Skills/SectionSkills'
+import SectionExperience from '../components/SectionExperience/SectionExperience'
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
       <SectionProfil/>
       <SectionAPropos/>
       <SectionSkills/>
+      <SectionExperience/>
     </div>
   );
 }
