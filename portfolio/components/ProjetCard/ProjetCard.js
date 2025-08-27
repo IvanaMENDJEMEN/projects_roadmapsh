@@ -6,17 +6,21 @@ import Link from "next/link";
 function ProjectCard( {projet }) {
   return (
     <div className="project-card">
-      <div className="project-image">
-        <Image src={projet.image} alt={projet.titre} width={400} height={250} />
+      <div className="project-image-card">
+        <Image 
+          src={projet.image} 
+          alt={projet.titre} 
+          fill
+        />
       </div>
-      <div className="project-content">
-        <h3 className="project-title">{projet.titre}</h3>
-        <p className="project-description">{projet.description}</p>
+      <div className="project-content-card">
+        <h3 className="project-title-card">{projet.titre}</h3>
+        <p className="project-description-card">{projet.description}</p>
         
           <Link
             href={ `/projet/${projet.id}`}
             rel="noopener noreferrer"
-            className="project-link"
+            className="project-link-card"
           >
             Voir le projet
           </Link>

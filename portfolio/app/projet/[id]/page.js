@@ -4,8 +4,10 @@ import projetsInitiaux from "../../../components/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import '../../../styles/ProjetDetailPage.css'
+import { useRouter } from "next/navigation";
 
 export default function ProjetDetail() {
+    const router = useRouter()
     const param = useParams()
     const projet = projetsInitiaux.find((p) => p.id === Number(param.id));
     
@@ -84,7 +86,7 @@ export default function ProjetDetail() {
             </section>
             
         <br />
-        <Link href="/projet" className="back-link">← Retour aux projets</Link>
+        <button className="back-link" onClick={() => router.back()}>← Retour aux projets</button>
         </div>
     );
 }
