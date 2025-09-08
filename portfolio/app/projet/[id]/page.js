@@ -1,15 +1,31 @@
-'use client'
-import Image from "next/image";
-import projetsInitiaux from "../../../components/data";
-import Link from "next/link";
-import { useParams } from "next/navigation";
-import '../../../styles/ProjetDetailPage.css'
-import { useRouter } from "next/navigation";
 
-export default function ProjetDetail() {
-    const router = useRouter()
-    const param = useParams()
-    const projet = projetsInitiaux.find((p) => p.id === Number(param.id));
+import Image from "next/image";
+import '../../../styles/ProjetDetailPage.css'
+import BackButton from "../../../components/BackButton/BackButton";
+
+
+async function getProjets() {
+  try {
+    const response = await fetch('http://localhost:3000/api/admin', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+      cache: 'no-store' // Pour s'assurer d'obtenir les données les plus récentes
+    })
+  
+    if (!response.ok) {
+      throw new Error(`Erreur de l'API: ${response.statusText}`);
+    }
+    return response.json();
+
+  } catch (error) {
+    console.error("Erreur lors de la récupération des projets :", error);
+    return [];
+  }
+
+}
+export default async function ProjetDetail({params}) {
+    const projets = await getProjets();
+    const projet = projets.find((p) => p.id === Number(params.id));
     
     if (!projet) {
         return <h2>Projet introuvable </h2>;
@@ -86,7 +102,7 @@ export default function ProjetDetail() {
             </section>
             
         <br />
-        <button className="back-link" onClick={() => router.back()}>← Retour aux projets</button>
+        <BackButton />
         </div>
     );
 }

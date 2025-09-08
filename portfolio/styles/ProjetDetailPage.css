@@ -132,16 +132,4 @@
 .btn.secondary:hover {
   background: #000;
 }
-.back-link {
-  margin-top: 2rem;
-  color: #444;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-    display: inline-block;
-    border-bottom: #444 solid 2px;
-}
-.back-link:hover {
-  color: #b350ec;
-  border-bottom: #b350ec solid 2px;
-}
+

@@ -3,6 +3,7 @@
   max-width: 1000px;
   margin: auto;
   color: #333;
+  min-height: 80vh;
 }
 
 .intro {
@@ -98,6 +99,27 @@
 .socials a:hover {
   transform: scale(1.2);
   color: #4b4004;
+}
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+}
+.status-message {
+  font-size: 0.9rem;
+  color: #3d1240;
+  position: absolute;
+  top: 70%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: 2px solid #3d1240;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+  display: none;
 }
 
 /* Responsive */

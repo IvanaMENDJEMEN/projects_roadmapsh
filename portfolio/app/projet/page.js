@@ -1,16 +1,32 @@
-'use client'
 
-import { useEffect, useState } from "react";
 import ProjetCard from "../../components/ProjetCard/ProjetCard";
-import projetsInitiaux  from "../../components/data";
 import "../../styles/ProjetPage.css";
 
-export default function ProjetPage() {
-    const [projets, setProjets] = useState(projetsInitiaux);
+async function getProjets() {
+  try {
+    const response = await fetch('http://localhost:3000/api/admin', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+      cache: 'no-store' // Pour s'assurer d'obtenir les données les plus récentes
+    })
+  
+    if (!response.ok) {
+      throw new Error(`Erreur de l'API: ${response.statusText}`);
+    }
+    return response.json();
 
-    useEffect(() => {
-        localStorage.setItem('projets', JSON.stringify(projets));
-    }, [projets]);
+  } catch (error) {
+    console.error("Erreur lors de la récupération des projets :", error);
+    return [];
+  }
+
+}
+export default async function ProjetPage() {
+  const projets = await getProjets();
+  console.log('projets recuperes',projets);
+  if (projets.length === 0) {
+    return <p className="no-projects-message">Aucun projet trouvé.</p>;
+  }
     
   return (
     <section className="projects-page">
